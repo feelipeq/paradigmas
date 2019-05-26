@@ -4,12 +4,12 @@ public class empresa {
 	
 	public void adicionarFunc(funcionario f){
 	
-		//for (int i = 0; i <= func.length - 1 ; i++){
-				//if (func[i].nome == null){
-					func[0]=f;
-				//}
-				
-		//}
+		for (int i = 0; i <= func.length - 1 ; i++){
+				if (func[i] == null){
+					func[i]=f;
+					break;
+				}			
+		}
 	}
 
 	public boolean removerFunc(int f){
@@ -24,20 +24,39 @@ public class empresa {
 		}
 	}
 	
-	public void calcularPgto(funcionario f){
-		
+	public double calcularPgto(int id){
+		double salario=0;
+		for (int i = 0; i <= func.length; i++){
+			if (func[i] == null){
+				break;
+			}else if (func[i].ID == id){
+				salario=func[i].pagamento();
+				return salario;
+			}
+		}
+		return salario;
 	}
 	
-	public void alterarDesconto(funcionario f){
-		
+	public boolean alterarDesconto(int id, double desct){
+		for (int i = 0; i <= func.length; i++){
+			if (func[i] == null){
+				break;
+		}
+			if (func[i].ID == id){
+				func[i].setDesconto(desct);
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	public void listaFunc(){
-		for (int i = 0; i <= 100; i++){
+		for (int i = 0; i <= func.length; i++){
 			if (func[i] == null){
 				break;
 			}
-				System.out.println(func[i].nome);
+				System.out.println("Nome do Funcionario: |  Id do Funcionario  |  Desconto");
+				System.out.println(func[i].nome  + "          " + func[i].ID +  "                        " + func[i].desconto);
 		}
 	}
 

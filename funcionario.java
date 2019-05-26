@@ -1,5 +1,5 @@
 public class funcionario extends Pessoa{
-  private double desconto, adicional, previdencia;
+  protected double desconto, adicional, previdencia;
 
   public funcionario(int ID, String nome, int departamento, double salario, double adicional){
     super(ID, nome, departamento, salario);;
