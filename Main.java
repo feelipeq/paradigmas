@@ -18,8 +18,8 @@ class Main {
     while (!menu){
     	resposta=false;
     	Scanner sc = new Scanner(System.in);
-    	System.out.print("\n                       Bem vindo a AplicaÁ„o Empresa\n"
-    			+ "                Selecione abaixo Qual opÁ„o quer utilizar\n"
+    	System.out.print("\n                       Bem vindo a Aplica√ß√£o Empresa\n"
+    			+ "                Selecione abaixo Qual op√ß√£o quer utilizar\n"
     			+ "\n                 --------------------------------------------"
     			+ "\n        	|       1) Adicionar Funcionario"
     			+ "\n		|	2) Remover Funcionario"
@@ -37,38 +37,38 @@ class Main {
     			
 	    		System.out.flush();
 	    		System.out.println("\nDigite o ID do Funcionario:");
-				int id = sc.nextInt();
-				
-				System.out.println("\nDigite o Nome do Funcionario:");
-				String nome = sc.next();
-				
-				System.out.println("\nDigite o Departamento do Funcionario:");
-				int dpto = sc.nextInt();
-				
-				System.out.println("\nDigite o Salario do Funcionario:");
-				double sal = sc.nextDouble();
-				
-				System.out.println("\nDigite o Adicional do Funcionario:");
-				double adc = Double.parseDouble(sc.next());;
-				
-				funcionario f = new funcionario(id,nome,dpto,sal,adc);
-				e.adicionarFunc(f);
-				System.out.println("\nFuncionario: " + f.nome + " inserido com Sucesso\n");
-				f=null;
-				System.out.println("\nVoltar ao menu inicial ? \n"
-						+ "\n1) Sim"
-						+ "\n2) N„o");
-				opt = sc.nextInt();
-				if (opt==1){
-					resposta=true;
-				}
+          int id = sc.nextInt();
+          
+          System.out.println("\nDigite o Nome do Funcionario:");
+          String nome = sc.next();
+          
+          System.out.println("\nDigite o Departamento do Funcionario:");
+          int dpto = sc.nextInt();
+          
+          System.out.println("\nDigite o Salario do Funcionario:");
+          double sal = sc.nextDouble();
+          
+          System.out.println("\nDigite o Adicional do Funcionario:");
+          double adc = Double.parseDouble(sc.next());;
+          
+          funcionario f = new funcionario(id,nome,dpto,sal,adc);
+          e.adicionarFunc(f);
+          System.out.println("\nFuncionario: " + f.nome + " inserido com Sucesso\n");
+          f=null;
+          System.out.println("\nVoltar ao menu inicial ? \n"
+              + "\n1) Sim"
+              + "\n2) N√£o");
+          opt = sc.nextInt();
+          if (opt==1){
+            resposta=true;
+          }
     		}
     	}
 		if (opt == 2) {
 			while (!resposta){
 	    		boolean resultado=false;
 				System.out.flush();
-	    		System.out.println("\nDigite a posiÁ„o (container) do Funcionario a ser removido:");
+	    		System.out.println("\nDigite a posi√ß√£o (container) do Funcionario a ser removido:");
 				int pos = sc.nextInt();
 				
 				System.out.println(resultado);
@@ -78,12 +78,12 @@ class Main {
 					System.out.println("Funcionario de posicao " + pos + " removido com sucesso\n");
 					
 				}else{
-					System.out.println("N„o existe funcionario alocado na posiÁ„o " + pos + ", tente novamente\n");
+					System.out.println("N√£o existe funcionario alocado na posi√ß√£o " + pos + ", tente novamente\n");
 				}
 				
 				System.out.println("\nVoltar ao menu inicial ? \n"
 						+ "\n1) Sim"
-						+ "\n2) N„o");
+						+ "\n2) N√£o");
 				opt = sc.nextInt();
 				if (opt==1){
 					resposta=true;
@@ -99,12 +99,12 @@ class Main {
 				int id = sc.nextInt();
 		
 				resultado=e.calcularPgto(id);
-				System.out.println("\nO Salario c·lculado do funcion·rio de id " + id + " È : R$ " + resultado);
+				System.out.println("\nO Salario c√°lculado do funcion√°rio de id " + id + " √© : R$ " + resultado);
 					
 			
 				System.out.println("\nVoltar ao menu inicial ? \n"
 						+ "\n1) Sim"
-						+ "\n2) N„o");
+						+ "\n2) N√£o");
 				opt = sc.nextInt();
 				if (opt==1){
 					resposta=true;
@@ -129,13 +129,13 @@ class Main {
 					System.out.println("\nFuncionario de ID " + id + " teve reajuste de " + desc +"\n");
 					
 				}else{
-					System.out.println("\nFuncionario de ID " + id + " n„o encontrado, tente novamente\n");
+					System.out.println("\nFuncionario de ID " + id + " n√£o encontrado, tente novamente\n");
 				}
 				
 				
 				System.out.println("\nVoltar ao menu inicial ? \n"
 						+ "\n1) Sim"
-						+ "\n2) N„o");
+						+ "\n2) N√£o");
 				opt = sc.nextInt();
 				if (opt==1){
 					resposta=true;
@@ -144,15 +144,15 @@ class Main {
 		}
 		
 		if (opt == 5) {
-			
+			String funcs;
 			while (!resposta){
 				System.out.flush();
-				System.out.println("Funcion·rios Apresentados Abaixo: \n");
-				e.listaFunc();
-				
+				System.out.println("Funcion√°rios Apresentados Abaixo: \n");
+				funcs = e.listaFunc();
+				System.out.println(funcs);
 				System.out.println("\nVoltar ao menu inicial ? \n"
 						+ "\n1) Sim"
-						+ "\n2) N„o");
+						+ "\n2) N√£o");
 				opt = sc.nextInt();
 				if (opt==1){
 					resposta=true;

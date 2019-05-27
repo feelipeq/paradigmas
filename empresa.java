@@ -50,15 +50,15 @@ public class empresa {
 		return false;
 	}
 	
-	public void listaFunc(){
-
-		System.out.println("Nome do Funcionario: |  Id do Funcionario  |  Desconto");
+	public String listaFunc(){
+    String funcionarios = "Nome do Funcionario: |  Id do Funcionario  |  Desconto\n";
 		for (int i = 0; i <= func.length; i++){
 			if (func[i] == null){
 				break;
 			}
-			System.out.println(func[i].nome  + "          " + func[i].ID +  "                        " + func[i].desconto);
+      funcionarios += func[i].nome  + "          " + func[i].ID +  "                        " + func[i].desconto + "\n";
 		}
+    return funcionarios;
 	}
 
 }
