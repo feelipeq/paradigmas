@@ -18,8 +18,24 @@ public class funcionario extends Pessoa{
   
   
  @Override
-  double pagamento(){
+public double pagamento(){
     // Calcula o salário líquido
     return(salario*(1- this.previdencia- this.desconto+ this.adicional));
-  }
+}
+
+public double getPrevidencia() {
+	return previdencia;
+}
+
+public void setPrevidencia(double previdencia) {
+	this.previdencia = previdencia;
+}
+
+public double getDesconto() {
+	return desconto;
+}
+
+public double getAdicional() {
+	return adicional;
+}
 }

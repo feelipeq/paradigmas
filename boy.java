@@ -11,7 +11,7 @@ public class boy extends Pessoa{
     this.desconto=desconto;
   }
   
-  double pagamento(){
+  public double pagamento(){
 	    // Calcula o salário líquido
 	  return(salario*(1- this.previdencia-this.desconto));
 	  }

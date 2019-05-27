@@ -51,12 +51,13 @@ public class empresa {
 	}
 	
 	public void listaFunc(){
+
+		System.out.println("Nome do Funcionario: |  Id do Funcionario  |  Desconto");
 		for (int i = 0; i <= func.length; i++){
 			if (func[i] == null){
 				break;
 			}
-				System.out.println("Nome do Funcionario: |  Id do Funcionario  |  Desconto");
-				System.out.println(func[i].nome  + "          " + func[i].ID +  "                        " + func[i].desconto);
+			System.out.println(func[i].nome  + "          " + func[i].ID +  "                        " + func[i].desconto);
 		}
 	}
 

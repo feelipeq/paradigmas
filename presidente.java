@@ -16,6 +16,7 @@ public class presidente extends Pessoa{
   }
 
   @Override
+public
   double pagamento(){
     // Calcula o salário líquido
     return(salario*(1-this.previdencia+this.adicional_whisky+this.adicional_helicoptero + this.adicional_adicional));
