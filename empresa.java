@@ -1,4 +1,6 @@
-
+//Victor Vasconcellos Borba - 31716369
+//Felipe Queiroz - 31725570
+//Felipe Pena Sales - 31709850
 public class empresa {
 	funcionario[] func = new funcionario[100];
 	
