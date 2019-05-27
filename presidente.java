@@ -1,3 +1,6 @@
+//Victor Vasconcellos Borba - 31716369
+//Felipe Queiroz - 31725570
+//Felipe Pena Sales - 31709850
 public class presidente extends Pessoa{
   private double adicional_whisky, adicional_helicoptero,previdencia,
   adicional_adicional;
