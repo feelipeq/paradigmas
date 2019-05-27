@@ -56,7 +56,7 @@ public class empresa {
 			if (func[i] == null){
 				break;
 			}
-      funcionarios += func[i].nome  + "          " + func[i].ID +  "                        " + func[i].desconto + "\n";
+      funcionarios += func[i].nome  + "                  " + func[i].ID +  "                        " + func[i].desconto + "\n";
 		}
     return funcionarios;
 	}

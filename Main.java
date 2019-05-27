@@ -21,7 +21,7 @@ class Main {
     	System.out.print("\n                       Bem vindo a Aplicação Empresa\n"
     			+ "                Selecione abaixo Qual opção quer utilizar\n"
     			+ "\n                 --------------------------------------------"
-    			+ "\n        	|       1) Adicionar Funcionario"
+    			+ "\n        |   1) Adicionar Funcionario"
     			+ "\n		|	2) Remover Funcionario"
     			+ "\n		|	3) Calcular Pagamento do Funcionario"
     			+ "\n		|	4) Alterar Desconto do Funcionario"
