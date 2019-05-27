@@ -26,7 +26,7 @@ public class empresa {
 	
 	public double calcularPgto(int id){
 		double salario=0;
-		for (int i = 0; i <= func.length; i++){
+		for (int i = 0; i <= func.length; i++){ 
 			if (func[i] == null){
 				break;
 			}else if (func[i].ID == id){
