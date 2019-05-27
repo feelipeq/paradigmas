@@ -5,12 +5,12 @@ class Main {
 	boolean menu=false;
 	boolean resposta=false;
 	int opt=0;
-	double salario;
+	//double salario;
 	empresa e = new empresa();
     //funcionario f = new funcionario(0,"Felipe Queiroz",1,1.200,0.02);
     //e.adicionarFunc(f);
     e.calcularPgto(0);
-    e.alterarDesconto(0, 1.03);
+    //e.alterarDesconto(0, 1.03);
     //System.out.println(e.calcularPgto(0));
     //e.removerFunc(0);
     e.listaFunc();
@@ -49,7 +49,7 @@ class Main {
 				double sal = sc.nextDouble();
 				
 				System.out.println("\nDigite o Adicional do Funcionario:");
-				double adc = sc.nextDouble();
+				double adc = Double.parseDouble(sc.next());;
 				
 				funcionario f = new funcionario(id,nome,dpto,sal,adc);
 				e.adicionarFunc(f);
@@ -65,15 +65,82 @@ class Main {
     		}
     	}
 		if (opt == 2) {
-		    		
+			while (!resposta){
+	    		boolean resultado=false;
+				System.out.flush();
+	    		System.out.println("\nDigite a posição (container) do Funcionario a ser removido:");
+				int pos = sc.nextInt();
+				
+				System.out.println(resultado);
+				resultado=e.removerFunc(pos);
+				System.out.println(resultado);
+				if (resultado){
+					System.out.println("Funcionario de posicao " + pos + " removido com sucesso\n");
+					
+				}else{
+					System.out.println("Não existe funcionario alocado na posição " + pos + ", tente novamente\n");
+				}
+				
+				System.out.println("\nVoltar ao menu inicial ? \n"
+						+ "\n1) Sim"
+						+ "\n2) Não");
+				opt = sc.nextInt();
+				if (opt==1){
+					resposta=true;
+				}
+			}
 		}
 		
 		if (opt == 3) {
+			while (!resposta){
+				double resultado;
+	    		System.out.flush();
+	    		System.out.println("\nDigite o ID do Funcionario:");
+				int id = sc.nextInt();
+		
+				resultado=e.calcularPgto(id);
+				System.out.println("\nO Salario cálculado do funcionário de id " + id + " é : R$ " + resultado);
+					
+			
+				System.out.println("\nVoltar ao menu inicial ? \n"
+						+ "\n1) Sim"
+						+ "\n2) Não");
+				opt = sc.nextInt();
+				if (opt==1){
+					resposta=true;
+				}
+			}
 			
 		}
 		
 		if (opt == 4) {
-			
+			while (!resposta){
+				boolean resultado=false;
+	    		System.out.flush();
+	    		System.out.println("\nDigite o ID do Funcionario:");
+				int id = sc.nextInt();
+				
+				System.out.println("\nDigite o reajuste de desconto do funcionario:");
+				double desc = Double.parseDouble(sc.next());
+				
+				
+				resultado=e.alterarDesconto(id,desc);
+				if (resultado){
+					System.out.println("\nFuncionario de ID " + id + " teve reajuste de " + desc +"\n");
+					
+				}else{
+					System.out.println("\nFuncionario de ID " + id + " não encontrado, tente novamente\n");
+				}
+				
+				
+				System.out.println("\nVoltar ao menu inicial ? \n"
+						+ "\n1) Sim"
+						+ "\n2) Não");
+				opt = sc.nextInt();
+				if (opt==1){
+					resposta=true;
+				}
+			}
 		}
 		
 		if (opt == 5) {
